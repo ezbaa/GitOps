@@ -19,13 +19,16 @@ spec:
   template:
     metadata:
       labels:
-        app: web
+        app: essi-app
     spec:
       containers:
+        - name: essi-app
           image: ezbaa/portfolio:0.0.1
           imagePullPolicy: Always
-          name: web
           resources: {}
+          ports:
+            - containerPort: 80
+              name: portfolio-svc
       dnsPolicy: ClusterFirst
       restartPolicy: Always
       schedulerName: default-scheduler
