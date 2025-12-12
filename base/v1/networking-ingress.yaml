@@ -1,0 +1,27 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-production
+    external-dns.alpha.kubernetes.io/hostname: PLACEHOLDER
+    no-nginx.ingress.kubernetes.io/auth-realm: realm string
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: 40m
+  name: portfolio-ingress
+spec:
+  rules:
+    - host: PLACEHOLDER
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio-svc
+                port:
+                  number: 8000
+  tls:
+    - hosts:
+        - PLACEHOLDER
+      secretName: essi-certificate-1
