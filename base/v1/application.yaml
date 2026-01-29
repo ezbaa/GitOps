@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
         - name: essi-app
-          image: ezbaa/portfolio:0.0.2
+          image: ezbaa/portfolio:0.0.3
           imagePullPolicy: Always
           resources: {}
           ports:
