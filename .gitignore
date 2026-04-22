@@ -1,0 +1,4 @@
+secret.yaml
+temp-secret.yaml
+*.env
+.env
