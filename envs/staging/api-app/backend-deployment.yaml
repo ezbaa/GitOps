@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
         - name: food-macro-api
-          image: ezbaa/food-macro-api:latest
+          image: ezbaa/food-macro-api:backend
           imagePullPolicy: Always
           resources: {}
           ports:
