@@ -4,3 +4,6 @@ resources:
   - api-app/backend-deployment.yaml
   - api-app/service.yaml
   - api-app/sealed-secret.yaml
+  - api-app/github-sealed-secret.yaml
+  - api-app/frontend-deployment.yaml
+  - frontend-service.yaml

@@ -7,3 +7,13 @@
 - op: replace
   path: /spec/tls/0/hosts/0
   value: essiantola.com
+- op: add
+  path: /spec/rules/0/http/paths/-
+  value:
+    path: /food-macros
+    pathType: Prefix
+    backend:
+      service:
+        name: food-macro-frontend-svc
+        port:
+          number: 80
