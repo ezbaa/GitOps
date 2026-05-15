@@ -6,4 +6,4 @@ resources:
   - api-app/sealed-secret.yaml
   - api-app/github-sealed-secret.yaml
   - api-app/frontend-deployment.yaml
-  - frontend-service.yaml
+  - api-app/frontend-service.yaml
