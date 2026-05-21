@@ -7,3 +7,4 @@ resources:
   - api-app/github-sealed-secret.yaml
   - api-app/frontend-deployment.yaml
   - api-app/frontend-service.yaml
+  - ../../base/v1

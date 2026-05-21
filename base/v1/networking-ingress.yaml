@@ -21,6 +21,12 @@ spec:
                 name: portfolio-svc
                 port:
                   number: 80
+          - path: /food-macro
+            backend:
+              service:
+                name: food-macro-frontend-svc
+                port: 
+                  number: 80    
   tls:
     - hosts:
         - PLACEHOLDER
