@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: food-macro-frontend
+  namespace: staging-essi
+  labels:
+    app: food-macro-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: food-macro-frontend
+  template:
+    metadata:
+      labels:
+        app: food-macro-frontend
+    spec:
+      containers:
+        - name: food-macro-frontend
+          image: ezbaa/food-macro-api:frontend
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              name: http

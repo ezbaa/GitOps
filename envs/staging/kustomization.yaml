@@ -1,10 +1,10 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - api-app/backend-deployment.yaml
-  - api-app/service.yaml
-  - api-app/sealed-secret.yaml
-  - api-app/github-sealed-secret.yaml
-  - api-app/frontend-deployment.yaml
-  - api-app/frontend-service.yaml
-  - ../../base/v1
+  # - api-app/backend-deployment.yaml
+  # - api-app/service.yaml
+  # - api-app/sealed-secret.yaml
+  # - api-app/github-sealed-secret.yaml
+  # - api-app/frontend-deployment.yaml
+  # - api-app/frontend-service.yaml
+  # - ../../base/v1
