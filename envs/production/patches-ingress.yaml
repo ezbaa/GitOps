@@ -17,6 +17,16 @@
         name: food-macro-frontend-svc
         port:
           number: 80 
+- op: add
+  path: /spec/rules/0/http/paths/-
+  value:
+    path: /api
+    pathType: Prefix
+    backend:
+      service:
+        name: food-macro-api-svc
+        port:
+          number: 8080          
 # - op: add
 #   path: /spec/rules/0/http/paths/-
 #   value:

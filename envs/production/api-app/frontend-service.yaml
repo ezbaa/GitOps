@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata: 
   name: food-macro-frontend-svc
-  namespace: staging-essi
+  namespace: production-essi
 spec:
   type: ClusterIP
   ports:
