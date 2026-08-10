@@ -26,7 +26,13 @@ spec:
         - name: food-macro-api
           image: ezbaa/food-macro-api:backend
           imagePullPolicy: Always
-          resources: {}
+          # Heaviest of the app pods; measured working set 38Mi.
+          resources:
+            requests:
+              cpu: 20m
+              memory: 64Mi
+            limits:
+              memory: 192Mi
           ports:
             - containerPort: 8080
               name: http

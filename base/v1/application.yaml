@@ -25,7 +25,15 @@ spec:
         - name: essi-app
           image: ezbaa/portfolio
           imagePullPolicy: Always
-          resources: {}
+          # Static portfolio site; measured working set 3.1Mi. Requests exist
+          # so the scheduler can see this pod and so it is not the first thing
+          # evicted under node memory pressure.
+          resources:
+            requests:
+              cpu: 10m
+              memory: 24Mi
+            limits:
+              memory: 64Mi
           ports:
             - containerPort: 80
               name: portfolio-svc

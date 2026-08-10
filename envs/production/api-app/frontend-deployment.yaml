@@ -19,6 +19,13 @@ spec:
         - name: food-macro-frontend
           image: ezbaa/food-macro-api:frontend
           imagePullPolicy: Always
+          # Static frontend; measured working set 3.0Mi.
+          resources:
+            requests:
+              cpu: 10m
+              memory: 24Mi
+            limits:
+              memory: 64Mi
           ports:
             - containerPort: 80
               name: http
